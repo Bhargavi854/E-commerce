@@ -1,0 +1,148 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.product-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+    transition: transform 0.3s;
+}
+
+.product-info:hover {
+    transform: scale(1.02);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-details {
+    padding: 2rem;
+    max-width: 400px;
+}
+
+.product-details h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.product-details .price {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-bottom: 1rem;
+}
+
+.product-details .description {
+    margin-bottom: 1.5rem;
+}
+
+.product-details .cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.product-details .cta:hover {
+    background-color: #e5533d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .product-info {
+        flex-direction: column;
+    }
+
+    .product-details {
+        padding: 1rem;
+    }
+
+    .product-details h1 {
+        font-size: 1.5rem;
+    }
+
+    .product-details .price {
+        font-size: 1.25rem;
+    }
+}
